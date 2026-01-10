@@ -582,14 +582,16 @@ span a {
 .dots {
   font-size: 20vmin;
   cursor: pointer;
+  font-family: sans-serif;
 }
 
 .cards {
-  margin: 10vmin 0vmin;
+  margin-top: 10vmin;
 }
 
 .swiper-slide {
   display: flex;
+  /* width: 40vmin; */
   flex-direction: column;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.079);
@@ -1376,6 +1378,7 @@ hr {
 
   .swiper-slide {
     gap: 0px;
+    width: 100%;
   }
   .swiper-slide h4 {
     margin-top: 3vmin;
