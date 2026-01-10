@@ -32,6 +32,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Loader */
@@ -159,6 +160,7 @@ nav a:hover {
 }
 #hamburger {
   display: none;
+  z-index: 999;
 }
 
 .nav-hr {
@@ -1038,7 +1040,10 @@ hr {
   margin-top: 8vmin;
   width: 100%;
 }
-@media only screen and (max-width: 650px) {
+@media (max-width: 950px) {
+  body {
+    overflow-y: hidden;
+  }
   /* Our Finance */
 
   .finances {
@@ -1101,10 +1106,9 @@ hr {
     color: yellowgreen;
     display: block;
     cursor: pointer;
+    z-index: 999;
   }
-  .logo {
-    width: 100%;
-  }
+
   .nav-links.active {
     color: yellowgreen;
   }
