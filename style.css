@@ -33,6 +33,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* Loader */
@@ -338,8 +339,7 @@ span a {
 }
 
 .cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   column-gap: 30px;
   margin-left: 40px;
   padding: 0px 50px;
@@ -800,6 +800,7 @@ hr {
 .Abouthome img {
   height: 100vh;
   background-position: center;
+  width: 100%;
 }
 
 .text {
@@ -1252,6 +1253,9 @@ hr {
     width: 100%;
     padding: 0;
     margin: 0;
+    gap: 10vmin;
+    justify-content: center;
+    align-items: center;
   }
   /* Business-Growth */
   .business-growth {
