@@ -38,6 +38,44 @@ document.addEventListener("scroll", () => {
     });
   }
 });
+
+// Login
+const popup = document.querySelector(".popup");
+const cancel = document.querySelector("#cancel");
+const password = document.querySelector("#password");
+const username = document.querySelector("#username");
+const ctn = document.querySelector(".ctn");
+ctn.addEventListener("click", () => {
+  popup.style.display = "block";
+});
+
+cancel.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+// Password Show
+let show = true;
+
+pass.addEventListener("click", () => {
+  if (show) {
+    show = false;
+    password.setAttribute("type", "text");
+  } else {
+    show = true;
+    password.setAttribute("type", "password");
+  }
+});
+
+login.addEventListener("click", () => {
+  if (username.value === "") {
+    alert("Please Enter the User name");
+  } else {
+    confirm(`Username:- ${username.value} 
+password:- ${password.value}`);
+  }
+  window.location.reload();
+});
+
 // SWIPER
 var swiper = new Swiper(".mySwiper", {
   autoplay: {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,6 +31,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Login Form -->
+    <div class="popup">
+      <form action="">
+        <i id="cancel" class="fa-solid fa-xmark"></i>
+        <img src="img/rb_3530 copy.png" alt="" />
+
+        <i id="user" class="fa-solid fa-user"></i>
+        <input type="text" id="username" placeholder="Username" required />
+
+        <i id="pass" class="fa-solid fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required />
+
+        <div className="btn">
+          <button id="login" type="submit" class="login">LOGIN</button>
+          <button class="sign-up">SIGN UP</button>
+        </div>
+
+        <a href="#" className="forget">Forgot Password?</a>
+
+        <h4>Don't have an account? <a href="#">Creat one</a></h4>
+      </form>
+    </div>
+
     <!-- Loader -->
     <div class="spinner">
       <div class="loader"></div>
@@ -47,6 +70,7 @@
         <a id="navs" class="nav-links" href="Services.html">Our Services</a>
         <hr class="nav-hr" />
         <a id="navs" class="nav-links" href="Contact.html">Contact Us</a>
+        <button class="ctn" id="ctn">Login</button>
       </nav>
     </header>
 

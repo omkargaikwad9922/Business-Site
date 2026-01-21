@@ -27,7 +27,11 @@ html::-webkit-scrollbar-thumb {
 }
 body {
   background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -36,9 +40,129 @@ body {
   width: 100%;
 }
 
-/* Loader */
+/* ---Login--- */
 
-/* HTML: <div class="loader"></div> */
+.ctn {
+  padding: 8px 15px;
+  background-color: #fc036b;
+  border-radius: 15px;
+  transition: 0.4s;
+  color: #ededed;
+}
+.ctn:hover {
+  background: #484872;
+  color: black;
+}
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: #0000004b;
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 978px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: #010103;
+
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+form img {
+  width: 150px;
+}
+
+#cancel {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#user {
+  color: white;
+  position: absolute;
+  top: 40%;
+  font-size: 20px;
+  right: 5rem;
+}
+
+#pass {
+  color: white;
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  right: 5rem;
+}
+form input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ffc107;
+  padding-top: 30px;
+  padding-left: 10px;
+  color: #ededed;
+  background: transparent;
+  width: 250px;
+  letter-spacing: 1px;
+  font-size: 19px;
+}
+
+input::placeholder {
+  padding: 20px 10px;
+  letter-spacing: 1px;
+}
+
+button {
+  margin: 40px 10px;
+  padding: 8px 20px;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+  top: 20px;
+}
+
+button:hover {
+  background: #ffc107;
+  color: #010103;
+  border: 2px solid #010103;
+}
+
+.forget {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #ededed;
+  letter-spacing: 1px;
+}
+
+form a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Loader */
 
 .spinner {
   height: 100vh;
@@ -55,39 +179,77 @@ body {
   --c: linear-gradient(#000 0 0);
   --m: radial-gradient(farthest-side, #000 92%, #0000);
   background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
-  background-size: 8px 12px, 8px 8px;
+  background-size:
+    8px 12px,
+    8px 8px;
   background-repeat: no-repeat;
   animation: l16 1s infinite linear alternate;
 }
 @keyframes l16 {
   0%,
   5% {
-    background-position: 0 50%, 0 0, 50% 50%, 50% 0, 100% 50%, 100% 0;
+    background-position:
+      0 50%,
+      0 0,
+      50% 50%,
+      50% 0,
+      100% 50%,
+      100% 0;
   }
   16.67% {
-    background-position: 0 50%, 0 calc(50% - 10px), 50% 50%, 50% 0, 100% 50%,
+    background-position:
+      0 50%,
+      0 calc(50% - 10px),
+      50% 50%,
+      50% 0,
+      100% 50%,
       100% 0;
   }
   33.33% {
-    background-position: 0 calc(50% + 10px), 0 50%, 50% 50%, 50% 0, 100% 50%,
+    background-position:
+      0 calc(50% + 10px),
+      0 50%,
+      50% 50%,
+      50% 0,
+      100% 50%,
       100% 0;
   }
   50% {
-    background-position: 0 calc(50% + 10px), 0 50%, 50% 50%,
-      50% calc(50% - 10px), 100% 50%, 100% 0;
+    background-position:
+      0 calc(50% + 10px),
+      0 50%,
+      50% 50%,
+      50% calc(50% - 10px),
+      100% 50%,
+      100% 0;
   }
   66.67% {
-    background-position: 0 calc(50% + 10px), 0 50%, 50% calc(50% + 10px),
-      50% 50%, 100% 50%, 100% 0;
+    background-position:
+      0 calc(50% + 10px),
+      0 50%,
+      50% calc(50% + 10px),
+      50% 50%,
+      100% 50%,
+      100% 0;
   }
   83.33% {
-    background-position: 0 calc(50% + 10px), 0 50%, 50% calc(50% + 10px),
-      50% 50%, 100% 50%, 100% calc(50% - 10px);
+    background-position:
+      0 calc(50% + 10px),
+      0 50%,
+      50% calc(50% + 10px),
+      50% 50%,
+      100% 50%,
+      100% calc(50% - 10px);
   }
   95%,
   100% {
-    background-position: 0 calc(50% + 10px), 0 50%, 50% calc(50% + 10px),
-      50% 50%, 100% calc(50% + 10px), 100% 50%;
+    background-position:
+      0 calc(50% + 10px),
+      0 50%,
+      50% calc(50% + 10px),
+      50% 50%,
+      100% calc(50% + 10px),
+      100% 50%;
   }
 }
 
@@ -659,7 +821,8 @@ form input {
   padding: 15px;
   width: 70%;
   border-radius: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
@@ -1434,7 +1597,8 @@ hr {
     padding: 15px;
     width: 100%;
     border-radius: 20px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    font-family:
+      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
