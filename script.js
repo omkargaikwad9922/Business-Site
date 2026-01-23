@@ -13,6 +13,54 @@ for (let nav of navs) {
   });
 }
 
+// login Pop
+const ctn = document.querySelector(".ctn");
+const pass = document.querySelector("#pass");
+const login = document.querySelector("#login");
+const password = document.querySelector("#password");
+const username = document.querySelector("#username");
+const popup = document.querySelector(".popup");
+const cancel = document.querySelector("#cancel");
+
+let curr = true;
+ctn.addEventListener("click", () => {
+  if (curr) {
+    curr = false;
+    popup.style.display = "block";
+    navlinks.classList.toggle("mobile-menu");
+  } else {
+    curr = true;
+    popup.style.display = "none";
+    navlinks.classList.toggle("mobile-menu");
+  }
+});
+
+cancel.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+// Password Show
+let show = true;
+
+pass.addEventListener("click", () => {
+  if (show) {
+    show = false;
+    password.setAttribute("type", "text");
+  } else {
+    show = true;
+    password.setAttribute("type", "password");
+  }
+});
+
+login.addEventListener("click", () => {
+  if (username.value === "") {
+    alert("Please Enter the User name");
+  } else {
+    confirm(`Username:- ${username.value} 
+password:- ${password.value}`);
+  }
+});
+
 // Loader
 window.onload = function () {
   setTimeout(function () {
